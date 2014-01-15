@@ -13,10 +13,8 @@ Installing
 
 The following instructions assume that you have Python 2.7 and virtualenv 
 installed. If not, make sure you have pip installed (http://www.pip-installer.org/en/latest/installing.html),
-and then install virtualenv (http://www.virtualenv.org/en/latest/virtualenv.html#installation).
-
-::
-    svn co http://scm.iqhealth-emr.cerner.corp/svn/sandbox/C08182/ btweeted
+and then install virtualenv (http://www.virtualenv.org/en/latest/virtualenv.html#installation).::
+    git clone git@github.com:webmaven/btweeted.git
     mkvirtualenv btweeted
     cd btweeted
     cp btweeted/secretsettings.txt btweeted/secretsettings.py
@@ -35,7 +33,7 @@ example file.
 Testing
 =======
 
-::
+Run the tests as follows::
     python manage.py test phrases
 
 You can also see the test coverage::
