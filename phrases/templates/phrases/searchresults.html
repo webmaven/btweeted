@@ -1,0 +1,24 @@
+{% extends "phrases/base.html" %}
+{% load i18n %}
+{% block content %}
+<h1 class="text-center"><b>{{ query }}</b></h1>
+{% load twitter_tag %}
+{% search_tweets for query as tweets limit 15 %}
+<div class="list-group">
+{% for tweet in tweets %}
+<div class="well list-group-item stream-item">
+    <div class="content">
+        <div class="stream-item-header">
+            <a class="user-profile-link" href="">
+                <img class="avatar" src="{{ tweet.user.profile_image_url }}">
+                <strong class="fullname">{{ tweet.user.name }}</strong>
+                <span class="username">@{{ tweet.user.screen_name }}</span>
+            </a>
+            <small class="time"><a href="https://twitter.com/{{ tweet.user.screen_name }}/statuses/{{ tweet.id_str }}">{{ tweet.datetime|timesince }}</a></small>
+        </div>
+        {{ tweet.html|safe }}
+    </div>
+</div>
+{% endfor %}
+</div>
+{% endblock content %}

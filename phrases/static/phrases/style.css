@@ -1,0 +1,36 @@
+#main {
+    margin-top: 60px;
+    max-width: 600px;
+}
+
+.stream-item .content {
+    margin-left: 58px;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 5px;
+}
+
+.stream-item .avatar {
+    float: left;
+    margin-top: 3px;
+    margin-left: -58px;
+}
+
+.user-profile-link {
+    color: #999;
+}
+
+.fullname {
+    color: #333;
+}
+
+.time {
+    position: relative;
+    float: right;
+    margin-top: 1px;
+    color: #bbb;
+}
+

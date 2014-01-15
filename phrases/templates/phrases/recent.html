@@ -1,0 +1,14 @@
+{% extends "phrases/base.html" %}
+{% load i18n %}
+{% block content %}
+<h1 class="text-center"><b>{% trans "Recent Twitter Searches:" %}</b></h1>
+{% if latest_search_list %}
+<div class="list-group">
+    {% for phrase in latest_search_list %}
+    <a class="list-group-item" href="{% url 'phrases:index' %}?q={{ phrase.phrase_text|urlencode}}">{{ phrase.phrase_text }}<span class="badge">{{ phrase.last_searched }}</span></a>
+    {% endfor %}
+</div>
+{% else %}
+<p>{% trans "No searches have been done." %}</p>
+{% endif %}
+{% endblock content %}

@@ -1,0 +1,21 @@
+# Python
+*.pyc
+*.pyo
+
+# sqlite3 Database
+btweeted.db
+
+# Testing
+.coverage
+
+# Secret settings are never checked in
+secretsettings.py
+
+# logfiles
+logfile
+
+# Virtualenv
+local
+bin
+include
+lib
