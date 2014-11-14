@@ -71,3 +71,9 @@ I extended the requirements a bit:
 * Phrases that are extremely similar (only case and leading/trailing whitespace
   differences so far) are treated as identical for search popularity purposes.
 
+
+
+.. image:: https://d2weczhvl823v0.cloudfront.net/webmaven/btweeted/trend.png
+   :alt: Bitdeli badge
+   :target: https://bitdeli.com/free
+
